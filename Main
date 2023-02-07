@@ -339,7 +339,7 @@ def main():
                    while valid_space(current_piece, grid):
                        current_piece.y += 1
                    current_piece.y -= 1
-                   print(convert_shape_format(current_piece))  # todo fix
+                   print(convert_shape_format(current_piece))'''  # todo fix
  
         shape_pos = convert_shape_format(current_piece)
  
@@ -372,9 +372,10 @@ def main():
     draw_text_middle("You Lost", 40, (255,255,255), win)
     pygame.display.update()
     pygame.time.delay(2000)
+    run=false
+    #update_score(score)
  
- 
-def main_menu(win):
+def main_menu():
     run = True
     while run:
         win.fill((0,0,0))
@@ -385,7 +386,7 @@ def main_menu(win):
                 run = False
  
             if event.type == pygame.KEYDOWN:
-                main(win)
+                main()
     pygame.quit()
  
 #creating surface for thhe game
